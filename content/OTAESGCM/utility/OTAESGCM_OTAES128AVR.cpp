@@ -25,11 +25,11 @@ Author(s) / Copyright (s): Deniz Erbilgin 2015
 
 #include <avr/pgmspace.h>
 
-#include "OTAESGCM_OTAES128.h"
-#include "OTAESGCM_OTAES128AVR.h"
+#include "OTAESGCM_OTAES256.h"
+#include "OTAESGCM_OTAES256AVR.h"
 
 
-#define AES_128_ONLY        // excludes untested parts of the library used for AES256
+#define AES_256_ONLY        // excludes untested parts of the library used for AES256
 
 
 // Use namespaces to help avoid collisions.
@@ -79,15 +79,15 @@ NOTE:   String length must be evenly divisible by 16byte (str_len % 16 == 0)
 /* Defines:                                                                  */
 /*****************************************************************************/
 // The number of columns comprising a state in AES. This is a constant in AES. Value=4
-#define Nb 4
-// The number of 32 bit words in a key.
-#define Nk 4
-// Key length in bytes [128 bit]
-#define KEYLEN 16
+#define Nb 8
+// The number of 64 bit words in a key.
+#define Nk 8
+// Key length in bytes [256 bit]
+#define KEYLEN 32
 // The number of rounds in AES Cipher.
-#define Nr 10
-// the size of the AES block in bytes. (128/8)
-#define AES_BLOCK_SIZE 16
+#define Nr 20
+// the size of the AES block in bytes. (256/16)
+#define AES_BLOCK_SIZE 32
 
 // jcallan@github points out that declaring Multiply as a function
 // reduces code size considerably with the Keil ARM compiler.
