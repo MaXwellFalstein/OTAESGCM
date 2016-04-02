@@ -1,2 +1,3 @@
 # OTAESGCM
-IoT-/Microcontroller- friendly, permissively licensed, AES-GCM implementation as 1.0+ Arduino library.
+
+IoT-/Microcontroller- friendly, permissively licensed, 256 bit AES-GCM implementation as 1.0+ Arduino library.
